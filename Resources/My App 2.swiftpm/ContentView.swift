@@ -2,12 +2,8 @@
 import Subsonic
 import SwiftUI
 
-/*
- fat shark
-*/
-
 struct ContentView: View {
-    let names = ["fat shark", "hello rune", "pig" ]
+    let names = ["fat shark", "hello rune", "pig thing" ]
     let columns = [
         GridItem(.adaptive(minimum: 250))
     ]
@@ -19,12 +15,7 @@ struct ContentView: View {
                     
                     ForEach(names, id: \.self) { name in
                         Button {
-                            if name == "hello rune" {
-                                play(sound: "\(name).mp3")
-                            } else  {
-                                play(sound: "\(name).m4a")
-                                
-                            }
+                            play(sound: "hellorune.m4a")
                             print("\(name) was tapped")
                         } label: {
                             Image(name)
@@ -37,9 +28,10 @@ struct ContentView: View {
                     
                 }
             }
-            .navigationTitle("Friend face says I...")
+            .navigationTitle("Friendface")
         }
         
         .navigationViewStyle(.stack)
     }
 }
+
